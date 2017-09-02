@@ -10,9 +10,11 @@ public class DemoController {
 	@Value("${words}")
 	String words;
 	@RequestMapping("/")
-	public String getWord() {
+	public Word getWord() {
 	    String[] wordArray = words.split(",");
 	    int i = (int)Math.round(Math.random() * (wordArray.length - 1));
-	    return wordArray[i];
+	    Word w = new Word();
+	    w.setWord(wordArray[i]);
+	    return w;
 	}
 }

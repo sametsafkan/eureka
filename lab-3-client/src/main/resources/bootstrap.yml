@@ -3,7 +3,7 @@ spring:
   profiles:
     active: production
   application:
-    name: lab-3-client
+    name: lab-6-client
   cloud:
     config:
       uri: http://localhost:8001
